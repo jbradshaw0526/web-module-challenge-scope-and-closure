@@ -27,12 +27,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   Study the code for counter1 and counter2, then answer the questions below.
   
-  1. What is the difference between counter1 and counter2?
+  1. What is the difference between counter1 and counter2? 
+
+  // counter2 is setting count to 0 by itself  wehre counter one is is set to counterMaker which makes count1 re usable and counter 2 not
   
   2. Which of the two uses a closure? How can you tell?
+  counter2 reteurn count++ has to go to the parent count in countermaker to get the value of count
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?  counter one is reusable with different counts in different functions counter 2 is contained so it is only used by itself so when you dont have any need for more uses.
 */
 
 // counter1 code
