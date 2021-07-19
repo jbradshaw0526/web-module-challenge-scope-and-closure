@@ -29,14 +29,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2? 
 
-  // counter2 is setting count to 0 by itself  wehre counter one is is set to counterMaker which makes count1 re usable and counter 2 not
+  //  counter1 closure is right and can ran multiple times
   
   2. Which of the two uses a closure? How can you tell?
-  counter2 reteurn count++ has to go to the parent count in countermaker to get the value of count
+  counter1 the variables are inside not outside of the function like in ocunter 2
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  counter one is reusable with different counts in different functions counter 2 is contained so it is only used by itself so when you dont have any need for more uses.
-*/
+  counter one to track the amount of times the counter is called and counter2 for adding 1 by 1 the counter
+     */
 
 // counter1 code
 function counterMaker() {
@@ -66,7 +66,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(/*Code Here*/){
-  return Math.floor(Math.random() *2);
+  return Math.floor(Math.random() * 2);
 }
 
 console.log(inning());
@@ -88,18 +88,33 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
-}
+function finalScore(scorecb, numbOfInnings){
+
+  return{
+
+  home: scorecb(),
+  Away: scorecb()
+    }
+  }
+  console.log(finalScore(inning,9));
+ 
+
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(scorecb) {
+  return {
+    'Home': scorecb(),
+    "Away": scorecb()
+  }
+  
 }
+console.log(getInningScore(inning));
+
+
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
