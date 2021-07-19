@@ -92,7 +92,7 @@ function finalScore(scorecb, numbOfInnings){
 
   return{
 
-  home: scorecb(),
+  Home: scorecb(),
   Away: scorecb()
     }
   }
@@ -158,9 +158,25 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(scorecb,gamecb) {
+  /* CODE HERE */ 
+   
+  const totalGame = [];
+  let homeScore = 0;
+  let awayScore = 0;
+
+  for(let i = 0; i< 3; i++){
+    const currentScore = gamecb(scorecb);
+    homeScore = homeScore + currentScore.home
+    awayScore + currentScore.away
+    totalGame.push(`period ${i +1}: Away ${currentScore.away} - home ${currentScore.home}`);
+  }
+  return scoreboard;
 }
+  
+
+console.log(scoreboard(getInningScore,inning, 9));
+
 
 
 
