@@ -59,6 +59,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+closure is like a lopp where the child loops back to the parent for a value
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +81,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+console.log(`${name} rolled a ${newRoll}`) it goes back to personalDice for the name which is set in const dan and zoes roll
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+dansroll doesnt change but the name that is given can
+
 c. What is the lexical scope of `newRoll`? 
+it can not be called by another function becasue it is inside of of one already and therefor local to that function
 
 
 ### Task 3 - Stretch Goals
